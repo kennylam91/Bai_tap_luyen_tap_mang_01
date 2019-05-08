@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<p>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.<br/>
+    Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. <br/>
+    Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.<br/><br/>
+    --Chương trình sẽ khởi tạo một mảng 10 phần tử random số nguyên từ 0-100 bất kì: <br/>
+</p>
+<div id="array1"></div>
+<div id="array2"></div>
+<button type="button" onclick="arrayConcat()">Hiển thị mảng đã được nối: </button>
+<div id="output1"></div>
+<div id="output2"></div>
+<script>
+    let ArrA=[], ArrB=[], ArrC=[];
+    for(i=0;i<10;i++){
+        let numRandom=Math.round(Math.random()*100);
+        ArrA.push(numRandom);
+    }
+    for(i=0;i<10;i++){
+        let numRandom=Math.round(Math.random()*100);
+        ArrB.push(numRandom);
+    }
+    document.getElementById("array1").innerHTML="Mảng A= [ " +ArrA +" ]";
+    document.getElementById("array2").innerHTML="Mảng B= [ " +ArrB +" ]";
+    function arrayConcat(){
+        ArrC=ArrA.concat(ArrB);
+        document.getElementById("output1").innerHTML="Mảng C= [ " +ArrC +" ]";
+    }
+
+</script>
+<style>
+    div{
+        margin:10px;
+    }
+    button{
+        margin-left: 10px;
+    }
+</style>
+</body>
+</html>

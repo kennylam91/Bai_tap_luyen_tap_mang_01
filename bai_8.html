@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<p>Bài 7- Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. <br/>
+    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.<br/><br/>
+    --Chương trình sẽ khởi tạo một mảng 10 phần tử random số nguyên từ 0-100 bất kì: <br/>
+</p>
+<div id="array"></div>
+<button type="button" onclick="arraySort()">Hiển thị mảng đã được sắp xếp</button>
+<div id="output1"></div>
+<div id="output2"></div>
+<script>
+    let Arr=[];
+    for(i=0;i<10;i++){
+        let numRandom=Math.round(Math.random()*100);
+        Arr.push(numRandom);
+    }
+    document.getElementById("array").innerHTML="[ " +Arr +" ]";
+    function arraySort(){
+        Arr.sort(function(a,b){return a-b});
+        document.getElementById("output1").innerHTML="[ " +Arr +" ]";
+    }
+
+</script>
+<style>
+    div{
+        margin:10px;
+    }
+    button{
+        margin-left: 10px;
+    }
+</style>
+</body>
+</html>

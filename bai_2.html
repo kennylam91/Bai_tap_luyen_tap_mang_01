@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<p>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.<br/>
+    Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.<br/><br/>
+    --Chương trình sẽ khởi tạo một mảng 10 phần tử random số nguyên từ 0-100 bất kì: <br/>
+</p>
+<div id="array"></div>
+<div id="output1"></div>
+<div id="output2"></div>
+<script>
+    let Arr=[];
+    let max=0;
+    let index="";
+    for(i=0;i<10;i++){
+        let numRandom=Math.round(Math.random()*100);
+        Arr.push(numRandom);
+    }
+    document.getElementById("array").innerHTML="[ " +Arr +" ]";
+    max=Arr[0];
+    for(let j in Arr){
+        if(max<Arr[j]) {
+            max=Arr[j];
+            index=j;
+        }
+
+    }
+    document.getElementById("output1").innerHTML=" - Phần tử lớn nhất trong mảng là: "+max;
+    document.getElementById("output2").innerHTML=" - Vị trí của nó là: "+index;
+</script>
+<style>
+    div{
+        margin:10px;
+    }
+</style>
+</body>
+</html>
